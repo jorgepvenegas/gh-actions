@@ -2,6 +2,11 @@ name: 'Hello World'
 description: 'World greeter'
 author: 'Jorge Venegas <jorgepvenegas@protonmail.com>'
 
+inputs:
+  character:
+    description: 'Futurama character'
+    default: 'bender'
+
 runs:
   using: 'node16'
   main: 'dist/index.js'
