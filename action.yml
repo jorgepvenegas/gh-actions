@@ -4,4 +4,4 @@ author: 'Jorge Venegas <jorgepvenegas@protonmail.com>'
 
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
