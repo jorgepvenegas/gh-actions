@@ -7,6 +7,10 @@ inputs:
     description: 'Futurama character'
     default: 'bender'
 
+outputs:
+  quote:
+    description: 'Resulting quote'
+
 runs:
   using: 'node16'
   main: 'dist/index.js'
