@@ -7814,13 +7814,23 @@ const AVAILABLE_CHARACTERS = [
 async function run () {
   const character = core.getInput('character') || DEFAULT_CHARACTER;
 
+  core.debug(`[Futurama] Input character: ${character}`);
+
   if(!AVAILABLE_CHARACTERS.includes(character)) {
     core.setFailed(`Unknown character ${character}`);
     return; 
   }
 
+  core.debug(`[Futurama] Fetching quote for: ${character}`);
+
   const response = await axios.get(`https://futuramaapi.herokuapp.com/api/characters/${character}/1`);
+
+  core.debug(`[Futurama] Fetched quote for: ${character}`);
+
   const { data } = response;
+
+  core.debug(`[Futurama] Data: ${JSON.stringify(data)}`);
+
   const firstEntry = data[0];
 
   console.log(`${firstEntry.character}: ${firstEntry.quote}`);
