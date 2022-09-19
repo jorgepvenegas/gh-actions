@@ -18,5 +18,8 @@ jobs:
         with:
           character: dr-zoidberg
         id: futurama
+      - uses: ./
+        with:
+          character: jorge
       - run: echo ${{steps.futurama.outputs.quote}}
 
